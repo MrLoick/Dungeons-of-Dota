@@ -1,0 +1,15 @@
+"addon"
+{
+	"addonname"									"Dungeons of Dota"
+	"dod_game_info_header_objective"			"Objective:"
+	"dod_brief_description"					"Get to the end of the level and defeat the enemies in your path!"
+	"dod_game_info_header_how_to_play"		"How To Play:"
+	"dod_game_info_controlone"					"Press the <span class='left_mouse_button'>Left Mouse Button</span> with your cursor on an enemy to use your hero's <span class='basic_attack'>basic attack</span>."
+	"dod_game_info_controltwo"						"Press the <span class='right_mouse_button'>Right Mouse Button</span> use your hero's primary ability."
+	"dod_game_info_items"						"Keep an eye out for <span class='epic'>epic</span> items. An item's name in <span class='items'>colored text</span> has custom attributes."
+	"dod_game_info_tips_header"					"Tips:"
+	"dod_game_info_tip01"						"Some creatures can cast abilities, watch out for red circles on the ground!"
+	"dod_game_info_tip02"						"Carry <span class='salve'>healing salves</span>: if you are hurt, run away and heal up!"
+	"dod_game_info_tip03"						"The more enemies you kill, the more items that will drop. Harder enemies generally drop better items."
+	"dod_game_info_tip04"						"Make sure to activate checkpoints so you don't have to run the length of the level again."
+}

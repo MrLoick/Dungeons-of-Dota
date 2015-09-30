@@ -1,0 +1,62 @@
+
+#compiling{
+	visibility: collapse;
+}
+#TargetPanel{
+	flow-children: down; 
+	width: 652px; 
+	height: 300px;
+	vertical-align: top;
+	horizontal-align: center;
+	margin-top: 50px;
+}
+
+#TargetName{
+	font-size: 96px;
+	horizontal-align: center;
+	vertical-align: bottom;
+	margin-bottom: -50px;
+	color: white;
+	text-shadow: 0px 0px 7px 6.0 #000000ff;
+
+}
+
+#TargetHealthBar{
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+#TargetHealthBarBackground{
+	vertical-align: center;
+}
+
+#THBCContainer{
+	vertical-align: center;
+	horizontal-align: left;
+}
+
+#TargetHealthBarColor{
+	vertical-align: center;
+	background-color: red;
+	horizontal-align: center;
+}
+
+#TargetHealthBarText{
+	font-size: 18px;
+	horizontal-align: center;
+	vertical-align: center;
+	margin-bottom: 15px;
+	text-shadow: 0px 0px 7px 3.0 #000000ff;
+}
+
+#TargetHealthBar{
+	font-size: 48px;
+}
+
+#TargetAbilities{
+	font-size: 24px;
+	vertical-align: top;
+	horizontal-align: center;
+	margin-top: -30px;
+	text-shadow: 0px 0px 7px 5.0 #000000ff;
+}

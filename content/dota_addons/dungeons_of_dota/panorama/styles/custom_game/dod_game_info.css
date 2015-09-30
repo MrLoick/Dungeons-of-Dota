@@ -1,0 +1,129 @@
+.DoDGameInfo
+{
+    width:100%;
+    flow-children: down;
+}
+ 
+Label
+{
+    font-size: 18px;
+    color: #999999;
+    vertical-align: top;
+}
+ 
+#Title
+{
+    flow-children: right;
+}
+
+#TitleIcon
+{
+    width: 64px;
+    height: 64px;
+    vertical-align: center;
+}
+
+#TitleName
+{
+    color: #cccccc;
+    font-size: 64px;
+    margin-left: 16px;
+    margin-top: 16px;
+    text-transform: uppercase;
+    vertical-align: center;
+}
+
+#BriefDescription
+{
+}
+
+#ThroneText,
+#CoinsText,
+#ItemsText
+{
+    width: 50%;
+}
+
+.Header
+{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 36px;
+    text-transform: uppercase;
+}
+
+#ObjectiveHeader
+{
+    margin-top: 18px;
+}
+
+#ThroneRow
+{
+    margin-top: -40px;
+}
+
+#ThroneText
+{
+    margin-top: 60px;
+}
+
+#CoinsRow
+{
+    margin-top: -120px;
+}
+
+#CoinsText
+{
+    margin-top: 160px;
+}
+
+#ItemsRow
+{
+    margin-top: 0px;
+}
+
+#ItemsText
+{
+    margin-top: 40px;
+}
+
+#TipsHeader
+{
+    margin-top: 0px;
+}
+
+#TipsRow
+{
+    flow-children: down;
+    margin-right: 92px;
+    margin-top: 18px;
+}
+
+.TipText
+{
+    margin-left: 16px;
+    margin-top: 0px;
+}
+
+.InfoRow
+{
+    flow-children: right;
+    width: 100%;
+}
+
+
+Label .left_mouse_button,
+Label .right_mouse_button,
+Label .basic_attack
+{
+    color: #cccccc;
+    font-weight: bold;
+}
+
+Label .epic,
+Label .items,
+Label .salve
+{
+    color: #fcaf3d;
+    font-weight: bold;
+}

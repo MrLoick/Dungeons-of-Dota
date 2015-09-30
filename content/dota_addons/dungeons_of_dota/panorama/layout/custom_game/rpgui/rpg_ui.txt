@@ -1,0 +1,31 @@
+<root>  
+       
+	<styles>        
+		<include src="file://{resources}/styles/custom_game/rpgui/rpg_ui.css" />
+		<include src="file://{resources}/styles/dotastyles.css" />
+		
+	</styles>      
+	         
+	<scripts> 
+		<include src="file://{resources}/scripts/custom_game/rpgui/rpg_ui.js" />
+	</scripts>       
+	    
+	<Panel class="rootPanel" hittest="false">
+	 
+		<Panel id="TargetPanel" hittest="false">
+			<Label id="TargetName" text="BANDIT" hittest="false"/>
+			<Panel id="TargetHealthBar" hittest="false">
+				<Image id="TargetHealthBarBackground" src="" hittest="false"/>
+				<Label id="TargetHealthBarText" text="0/0" hittest="false"/>
+				<Panel id="THBCContainer">
+					<Panel id="TargetHealthBarColor" src="" hittest="false" />
+				</Panel>
+			</Panel>
+			<Label id="TargetAbilities" hittest="false"/>
+		</Panel>
+	</Panel>
+	 
+	 
+	
+</root>
+ 
