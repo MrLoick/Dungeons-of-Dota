@@ -1,19 +1,29 @@
 "AddonInfo"
 {
 	"TeamCount"		"1"
-	"maps"      "misty_heights fiery_depths ruinous_dungeon"
+	"maps"      "misty_heights fiery_depths ruinous_dungeon dead_ends icy_demise"
 	"ruinous_dungeon"
 	{
-		"MaxPlayers"		"2"
+		"MaxPlayers"		"4"
 	}
 
 	"misty_heights"
 	{
-		"MaxPlayers"		"2"
+		"MaxPlayers"		"4"
 	}
 
 	"fiery_depths"
 	{
-		"MaxPlayers"		"2"
+		"MaxPlayers"		"4"
+	}
+
+	"dead_ends"
+	{
+		"MaxPlayers"		"4"
+	}
+
+	"icy_demise"
+	{
+		"MaxPlayers"		"4"
 	}
 }

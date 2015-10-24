@@ -1,0 +1,31 @@
+//=================================================================================================================
+// Broadsword tier1
+//=================================================================================================================
+"item_broadsword_tier_one"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"2005"
+	"BaseClass"						"item_broadsword"
+	"AbilityTextureName"			"item_broadsword"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"100"
+	"ItemShopTags"					"damage"
+	"ItemQuality"					"component"
+	"ItemAliases"					"broadsword"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"15"
+		}
+	}
+}

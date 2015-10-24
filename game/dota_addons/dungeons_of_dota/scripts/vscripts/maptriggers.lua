@@ -8,7 +8,7 @@ function Checkpoint_OnStartTouch( trigger )
 	hBuilding:SetTeam( nGOOD_TEAM )
 
 	if sCheckpointTriggerName ~= "checkpoint00" then
-		BroadcastMessage( "Activated " .. sCheckpointTriggerName, 3 )
+		BroadcastMessage( "Activated Checkpoint!", 3 )
 		EmitGlobalSound( "DOTA_Item.Refresher.Activate" ) -- Checkpoint.Activate
 	end
 end
@@ -43,6 +43,6 @@ function LevelEnd_OnStartTouch( trigger )
 	print( "LevelEnd_OnStartTouch: " .. sLevelEndTriggerName .. " activated by " .. hHero:GetUnitName() )
 
 	GameRules:SetCustomVictoryMessage( "Level Complete!" )
-	GameRules:SetCustomVictoryMessageDuration( 25.0 )
+	GameRules:SetCustomVictoryMessageDuration( 3.0 )
 	GameRules:SetGameWinner( 2 )
 end

@@ -1,0 +1,101 @@
+.rootPanel
+{
+	flow-children: down;
+	horizontal-align: center;
+	vertical-align: bottom;
+	text-align: center;
+	width: 606px;
+	height: 48px;
+	margin-bottom: 100px;
+	margin-left: -3px;
+}
+
+#TargetPanel
+{
+	flow-children: down; 
+	border: 1px solid black;
+	background-color: #272823;
+	margin-left: 8px;
+	margin-right: 8px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	width: 606px; 
+	height: 40px;
+	horizontal-align: center;
+	vertical-align: top;
+}
+
+#TargetHealthBar
+{
+	width: 606px; 
+	height: 22px;
+	vertical-align: top;
+	horizontal-align: left;
+}
+
+#THBCContainer
+{
+	border: 1px solid black;
+	vertical-align: center;
+	horizontal-align: left;
+}
+
+#TargetHealthBarColor
+{
+	vertical-align: center;
+	background-color: green;
+	height: 22px;
+}
+
+#TargetHealthBarText
+{
+	font-size: 16px;
+	horizontal-align: center;
+	text-align: center;
+	vertical-align: center;
+	margin-top: 3px;
+	text-shadow: 0px 0px 7px 3.0 #000000ff;
+}
+
+#TargetHealthBar
+{
+	font-size: 24px;
+}
+
+#TargetManaBar
+{
+	width: 606px; 
+	height: 16px;
+	vertical-align: bottom;
+	horizontal-align: center;
+}
+
+#TMBCContainer
+{
+	border: 1px solid black;	
+	vertical-align: center;
+	horizontal-align: left;
+}
+
+#TargetManaBarColor
+{
+	vertical-align: center;
+	background-color: blue;
+	text-align: center;
+	height: 16px;
+}
+
+#TargetManaBarText
+{
+	font-size: 12px;
+	horizontal-align: center;
+	vertical-align: center;
+	text-align: center;
+	margin-bottom: 3px;
+	text-shadow: 0px 0px 7px 3.0 #000000ff;
+}
+
+#TargetManaBar
+{
+	font-size: 48px;
+}

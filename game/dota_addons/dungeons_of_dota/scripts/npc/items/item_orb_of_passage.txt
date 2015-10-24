@@ -1,0 +1,33 @@
+//=================================================================================================================
+// Orb of Passage
+//=================================================================================================================
+"item_orb_of_passage"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_branches"
+	"AbilityTextureName"			"item_gem"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"Model"							"models/props_gameplay/gem01.vmdl"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"
+	"ItemShopTags"					""
+	"ItemQuality"					"component"
+	"ItemAliases"					""
+	"ItemPurchasable"				"0"
+	"ItemSellable"					"0"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_all_stats"		"0"
+		}
+	}
+}

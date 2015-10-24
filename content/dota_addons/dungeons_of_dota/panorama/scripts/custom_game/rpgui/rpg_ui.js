@@ -99,7 +99,7 @@ function TargetUIPeriodic(){
 		SetTargetUIType("grandeur");
 	}
 	var unit = GetTargetUnit();
-	if(!unit){
+	if(!unit || Entities.GetMaxHealth(unit) == -1){
 		$('#TargetPanel').visible = false;
 		$.Schedule(0.03, TargetUIPeriodic);
 		return;

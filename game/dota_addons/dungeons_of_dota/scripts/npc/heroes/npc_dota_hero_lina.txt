@@ -1,0 +1,23 @@
+"npc_dota_hero_lina"
+{
+	"override_hero"				"npc_dota_hero_lina"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+	"Ability1"					"lina_fireball"
+	"Ability2"					"lina_dragon_slave"
+	"Ability3"					"lava_pool_dd" 
+	"Ability4"					"meteor_eclipse_dd"
+	"Ability5"					"lina_combustion_dd"
+	"Ability6"					"attribute_bonus_dd" 
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
+	"AttackRate"				"1000"
+	"AttackAnimationPoint"		"1000"
+
+	"MovementTurnRate"			"4.0"
+
+	"StatusHealthRegen"			"1.0"
+	"StatusManaRegen"			"2.0"
+
+	"VisionDaytimeRange"		"1200"
+	"VisionNighttimeRange"		"1200"
+}	

@@ -1,0 +1,39 @@
+//=================================================================================================================
+    // Juggernaut Alternate Attack
+    //=================================================================================================================
+    "juggernaut_cleave"
+    {
+        // General
+        "ScriptFile"                    "lua_abilities/juggernaut_cleave"
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "juggernaut_blade_fury"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "MaxLevel"                      "6"
+
+        // Casting
+        "AbilityDamage"                 "100 120 140 160 200 260"
+
+        // Time
+        "AbilityCooldown"               "12.0 11.0 10.0 8.0 6.0 4.0"
+        "AbilityChannelTime"            "0.0"
+        "AbilityDuration"               "1.0 1.0 1.0 1.0"
+
+        // Cost
+        "AbilityManaCost"               "30 40 50 60 75 90"
+        
+        // Special
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "blade_fury_radius"         "250 250 250 250 250 250"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "blade_fury_damage_tick"    "0.2"
+            }
+        }
+    }

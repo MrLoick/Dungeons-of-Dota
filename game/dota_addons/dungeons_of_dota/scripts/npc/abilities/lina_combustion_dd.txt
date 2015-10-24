@@ -1,0 +1,99 @@
+//=================================================================================================================
+    // Lina Combustion
+    //=================================================================================================================
+    "lina_combustion_dd"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"            "lina_fiery_soul"
+        "MaxLevel"                      "6"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "mana_regen"        "2 4 6 10 12 14"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "hero_multiplier"   "10"            // Only used for the stack count
+            }
+            "03"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "regen_duration"            "6.0"
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_sadist_datadriven"
+            {
+                "Passive"   "1"
+                "IsHidden"  "1"
+
+                "OnKill"
+                {
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_sadist_regen_datadriven"
+                        "Target"        "CASTER"
+                    }
+                }
+
+                "OnHeroKilled"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"    "scripts/vscripts/heroes/hero_lina/combustion.lua"
+                        "Function"      "ApplySadistHero"
+                        "modifier"      "modifier_sadist_regen_datadriven"
+                    }
+                }
+            }
+
+            // Stack modifier
+            "modifier_sadist_buff_datadriven"
+            {
+                "IsBuff"    "1"
+                "Duration"  "%regen_duration"
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"     "%mana_regen"
+                }
+            }
+
+            "modifier_sadist_regen_datadriven"
+            {
+                "Duration"  "%regen_duration"
+                "IsHidden"  "1"
+
+                "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+                "OnCreated"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"        "heroes/hero_lina/combustion.lua"
+                        "Function"          "ApplySadist"
+                        "stack_modifier"    "modifier_sadist_buff_datadriven"
+                    }
+                }
+
+                "OnDestroy"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"        "heroes/hero_lina/combustion.lua"
+                        "Function"          "RemoveSadist"
+                        "stack_modifier"    "modifier_sadist_buff_datadriven"
+                    }
+                }           
+            }
+        }
+    }

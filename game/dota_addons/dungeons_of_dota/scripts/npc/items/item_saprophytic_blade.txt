@@ -1,0 +1,30 @@
+//=================================================================================================================
+// Saprophytic Blade
+//=================================================================================================================
+"item_saprophytic_blade"
+{
+	"ID"							"2003"		
+	"BaseClass"						"item_lua"
+	"ScriptFile"					"lua_items/item_saprophytic_blade.lua"
+	"AbilityTextureName"			"item_demon_edge"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"100"
+	"ItemShopTags"					"damage"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"blade"
+	"ItemPurchasable"				"0"
+	"ItemSellable"					"0"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"100"
+		}
+	}
+}

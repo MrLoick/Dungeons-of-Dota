@@ -1,48 +1,71 @@
-// Dota Heroes File
-// NOTE: This isn't for creating new heroes, this is for taking a currently existing hero as a template and overriding
-// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
 "DOTAHeroes"
 {
+	"npc_dota_hero_crystal_maiden"
+	{
+		"override_hero"				"npc_dota_hero_crystal_maiden"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"Ability1"					"cm_icelance"
+		"Ability2"					"cm_hail_storm"
+		"Ability3"					"cm_congealment_dd" 
+		"Ability4"					"cm_frost_nova_dd"
+		"Ability5"					"cm_regen_aura_dd"
+		"Ability6"					"attribute_bonus_dd" 
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
+		"AttackRate"				"1000"
+		"AttackAnimationPoint"		"1000"
+	
+		"MovementTurnRate"			"4.0"
+	
+		"StatusHealthRegen"			"1.0"
+		"StatusManaRegen"			"2.0"
+	
+		"VisionDaytimeRange"		"1200"
+		"VisionNighttimeRange"		"1200"
+	}
 	"npc_dota_hero_juggernaut"
 	{
 		"override_hero"				"npc_dota_hero_juggernaut"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"Ability1"					"juggernaut_slash"
 		"Ability2"					"juggernaut_cleave"
-		"Ability3"					""
-		"Ability4"					""
-		"AttackDamageMin"			"0"
-		"AttackDamageMax"			"0"
+		"Ability3"					"rubick_empty1"
+		"Ability4"					"rubick_empty2"
+		"Ability5"					"holdout_fiery_soul"
+		"Ability6"					"attribute_bonus_dd"
+		"AttackDamageMin"			"10"
+		"AttackDamageMax"			"10"
 		"AttackRate"				"1000"
 		"AttackAnimationPoint"		"1000"
-
+	
 		"MovementTurnRate"			"4.0"
-
+	
 		"StatusHealthRegen"			"1.0"
 		"StatusManaRegen"			"1.0"
-
+	
 		"VisionDaytimeRange"		"1200"
 		"VisionNighttimeRange"		"1200"
 	}
-
 	"npc_dota_hero_lina"
 	{
 		"override_hero"				"npc_dota_hero_lina"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"Ability1"					"lina_fireball"
 		"Ability2"					"lina_dragon_slave"
-		"Ability3"					"" 
-		"Ability4"					"" 
+		"Ability3"					"lava_pool_dd" 
+		"Ability4"					"meteor_eclipse_dd"
+		"Ability5"					"lina_combustion_dd"
+		"Ability6"					"attribute_bonus_dd" 
 		"AttackDamageMin"			"0"
 		"AttackDamageMax"			"0"
 		"AttackRate"				"1000"
 		"AttackAnimationPoint"		"1000"
-
+	
 		"MovementTurnRate"			"4.0"
-
+	
 		"StatusHealthRegen"			"1.0"
 		"StatusManaRegen"			"2.0"
-
+	
 		"VisionDaytimeRange"		"1200"
 		"VisionNighttimeRange"		"1200"
 	}	
@@ -51,19 +74,21 @@
 		"override_hero"				"npc_dota_hero_tusk"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"Ability1"					"tusk_slash"
-		"Ability2"					"tusk_punch"
-		"Ability3"					"tusk_kick"
-		"Ability4"					""
+		"Ability2"					"tusk_walrus_punch_dd"
+		"Ability3"					"tusk_walrus_kick_dd"
+		"Ability4"					"thunder_flop_dd"
+		"Ability5"					"reactive_armor_dd"
+		"Ability6"					"attribute_bonus_dd"
 		"AttackDamageMin"			"20"
 		"AttackDamageMax"			"20"
 		"AttackRate"				"1000"
 		"AttackAnimationPoint"		"1.0"
-
+	
 		"MovementTurnRate"			"4.0"
-
-		"StatusHealthRegen"			"2.5"
+	
+		"StatusHealthRegen"			"2.0"
 		"StatusManaRegen"			"1.0"
-
+	
 		"VisionDaytimeRange"		"1200"
 		"VisionNighttimeRange"		"1200"
 	}

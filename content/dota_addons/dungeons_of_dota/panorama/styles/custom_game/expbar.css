@@ -1,0 +1,146 @@
+.rootPanel
+{
+	flow-children: down;
+	horizontal-align: left;
+	vertical-align: bottom;
+	text-align: center;
+	width: 380px;
+	height: 60px;
+	margin-left: 286px;
+	border: 1px solid black;
+}
+
+#InfoPanel
+{
+	border: 1px solid black;
+	flow-children: right; 
+	background-color: #272823;
+	width: 388px; 
+	height: 30px;
+	horizontal-align: center;
+	vertical-align: top;
+}
+
+#TargetInfo
+{
+	width: 54px; 
+	height: 30px;
+	text-align: center;
+	vertical-align: center;
+	horizontal-align: left;
+}
+
+#TargetInfoText
+{
+	font-size: 13px;
+	horizontal-align: center;
+	text-align: center;
+	vertical-align: center;
+	margin-top: 3px;
+	text-shadow: 0px 0px 7px 3.0 #000000ff;
+}
+
+#TargetArmor
+{
+	width: 196px; 
+	height: 30px;
+	text-align: center;
+	vertical-align: center;
+	horizontal-align: left;
+}
+
+#TargetArmorText
+{
+	font-size: 16px;
+	horizontal-align: center;
+	text-align: center;
+	vertical-align: center;
+	margin-top: 3px;
+	text-shadow: 0px 0px 7px 3.0 #000000ff;
+}
+
+#TargetDamage
+{
+	width: 196px; 
+	height: 30px;
+	text-align: center;
+	vertical-align: center;
+	horizontal-align: left;
+}
+
+#TargetDamageText
+{
+	font-size: 16px;
+	horizontal-align: center;
+	text-align: center;
+	vertical-align: center;
+	margin-top: 3px;
+	text-shadow: 0px 0px 7px 3.0 #000000ff;
+}
+
+#TargetPanel
+{
+	border: 1px solid black;
+	flow-children: right; 
+	background-color: #272823;
+	width: 388px; 
+	height: 30px;
+	horizontal-align: center;
+	vertical-align: top;
+}
+
+#TargetLvl
+{
+	width: 54px; 
+	height: 30px;
+	text-align: center;
+	vertical-align: center;
+	horizontal-align: left;
+}
+
+#TargetLvlText
+{
+	font-size: 13px;
+	horizontal-align: center;
+	text-align: center;
+	vertical-align: center;
+	margin-top: 3px;
+	text-shadow: 0px 0px 7px 3.0 #000000ff;
+}
+
+#TargetExpBar
+{
+	width: 388px; 
+	height: 30px;
+	vertical-align: bottom;
+	horizontal-align: left;
+}
+
+#TEBCContainer
+{	
+	vertical-align: center;
+	horizontal-align: left;
+}
+
+#TargetExpBarColor
+{
+	vertical-align: center;
+	background-color: #FF7E00;
+	text-align: center;
+	height: 28px;
+}
+
+#TargetExpBarText
+{
+	font-size: 14px;
+	horizontal-align: center;
+	vertical-align: center;
+	text-align: center;
+	margin-top: 2px;
+	text-shadow: 0px 0px 7px 3.0 solid black;
+}
+
+#TargetExpBar
+{
+	font-size: 24px;
+}

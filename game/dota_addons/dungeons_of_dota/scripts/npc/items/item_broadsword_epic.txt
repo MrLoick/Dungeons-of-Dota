@@ -1,0 +1,28 @@
+//=================================================================================================================
+// Broadsword (epic)
+//=================================================================================================================
+"item_broadsword_epic"
+{
+	"ID"							"2004"
+	"BaseClass"						"item_lua"
+	"ScriptFile"					"lua_items/item_broadsword_epic.lua"
+	"AbilityTextureName"			"item_broadsword"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"100"
+	"ItemShopTags"					"damage"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"broadsword"
+	"SideShop"						"1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"100"
+		}
+	}
+}

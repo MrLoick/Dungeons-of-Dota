@@ -1,0 +1,110 @@
+//=================================================================================================================
+    // Lina Fiery Rain
+    //=================================================================================================================
+    "meteor_eclipse_dd"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityTextureName"            "invoker_chaos_meteor"
+        "MaxLevel"                      "6"
+
+        // Precache
+        //-------------------------------------------------------------------------------------------------------------
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+            "particle"          "particles/units/heroes/hero_luna/luna_eclipse_impact.vpcf"
+            "particle"          "particles/units/heroes/hero_luna/luna_eclipse.vpcf"
+            "particle"          "particles/units/heroes/hero_invoker/invoker_chaos_meteor.vpcf"
+            "particle"          "particles/units/heroes/hero_invoker/invoker_chaos_meteor_fly.vpcf"
+        }
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0.4 0.4 0.4 0.4 0.4 0.4"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "15.0 13.0 11.0 9.0 7.0 5.0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "95 110 125 140 155 170"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "radius"                    "675 700 725 750 775 800"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "beam_interval"             "0.6 0.6 0.6 0.6 0.6 0.6"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "beams"                     "4 7 10 14 17 21"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "hit_count"                 "4 4 5 5 6 6"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "duration_tooltip"          "1.8 3.6 5.4 7.4 9.2 11.2"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "travel_distance"           "465 615 780 930 1095 1245"
+            }
+            "07"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "travel_speed"              "300"
+            }
+            "08"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "damage"                    "135 160 185 210 235 260"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "FireEffect"
+            {
+                "EffectName"        "particles/units/heroes/hero_luna/luna_eclipse.vpcf"
+                "EffectAttachType"  "follow_origin"
+                "Target"            "CASTER"
+
+                "ControlPointEntities"
+                {
+                    "CASTER"    "attach_origin"
+                    "CASTER"    "attach_origin"
+                    "CASTER"    "attach_origin"
+                }
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"            "scripts/vscripts/heroes/hero_lina/meteoreclipselua.lua"
+                "Function"              "eclipse_start"
+                "LandTime"              "%land_time"
+                "TravelSpeed"           "%travel_speed"
+                "TravelDistance"        "%travel_distance"
+
+            }
+        }
+    }

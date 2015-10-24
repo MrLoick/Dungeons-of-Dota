@@ -1,0 +1,92 @@
+//=================================================================================
+// Creature: Abomination
+//=================================================================================
+"npc_dota_creature_abomination"
+{
+	// Script
+	"vscripts"					"rpg_creature.lua"
+
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+	"SoundSet"					"Hero_Pudge"					// Name of sound set.
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
+	"Level"						"1"
+	"ModelScale" 				".9"
+
+	// Abilities
+	//----------------------------------------------------------------
+	"Ability1"					""			// Ability 1
+	"Ability2"					""			// Ability 2
+	"Ability3"					""			// Ability 3
+	"Ability4"					""			// Ability 4
+
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"3"			// Physical protection.
+
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackDamageMin"			"60"		// Damage range min.
+	"AttackDamageMax"			"70"		// Damage range max.	
+	"AttackRate"				"2.4"		// Speed of attack.
+	"AttackAnimationPoint"		"0.43"		// Normalized time in animation cycle to attack.
+	"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+	"AttackRange"				"128"		// Range within a target can be attacked.
+	"ProjectileModel"			""			// Particle system model for projectile.
+	"ProjectileSpeed"			"0"			// Speed of projectile.		   
+
+	// Bounds
+	//----------------------------------------------------------------
+	"RingRadius"				"70"
+	"HealthBarOffset"			"215"
+
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyXP"					"30"		// Experience earn.
+	"BountyGoldMin"				"20"		// Gold earned min.
+	"BountyGoldMax"				"35"		// Gold earned max.
+
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"300"		// Speed.
+	"MovementTurnRate"			"0.8"		// Turning rate.
+
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"360"		// Base health.
+	"StatusHealthRegen"			"1"			// Health regeneration rate.
+	"StatusMana"				"0"		// Base mana.
+	"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1400"		// Range of vision during day light.
+	"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+	"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+	// Creature Data
+	//----------------------------------------------------------------
+	"Creature"
+	{
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"258"		}
+			"Wearable2"		{	"ItemDef"		"259"		}
+			"Wearable3" 	{	"ItemDef"		"260"		}
+			"Wearable4"		{	"ItemDef"		"261"		}
+			"Wearable5"		{	"ItemDef"		"262"		}
+			"Wearable6"		{	"ItemDef"		"470"		} //Belt
+			"Wearable7"		{	"ItemDef"		"47"		} //Hook
+		}
+	}
+}

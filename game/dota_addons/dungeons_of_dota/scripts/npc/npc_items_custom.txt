@@ -1,6 +1,127 @@
 "DOTAAbilities"
 {
 	//=================================================================================================================
+	// Broadsword (epic)
+	//=================================================================================================================
+	"item_broadsword_epic"
+	{
+		"ID"							"2004"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/item_broadsword_epic.lua"
+		"AbilityTextureName"			"item_broadsword"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"100"
+		"ItemShopTags"					"damage"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"broadsword"
+		"SideShop"						"1"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"100"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Broadsword tier1
+	//=================================================================================================================
+	"item_broadsword_tier_one"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2005"
+		"BaseClass"						"item_broadsword"
+		"AbilityTextureName"			"item_broadsword"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"100"
+		"ItemShopTags"					"damage"
+		"ItemQuality"					"component"
+		"ItemAliases"					"broadsword"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"15"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Broadsword tier3
+	//=================================================================================================================
+	"item_broadsword_tier_three"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2007"
+		"BaseClass"						"item_broadsword"
+		"AbilityTextureName"			"item_broadsword"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"100"
+		"ItemShopTags"					"damage"
+		"ItemQuality"					"component"
+		"ItemAliases"					"broadsword"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"45"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Broadsword tier2
+	//=================================================================================================================
+	"item_broadsword_tier_two"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2006"		
+		"BaseClass"						"item_broadsword"
+		"AbilityTextureName"			"item_broadsword"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"100"
+		"ItemShopTags"					"damage"
+		"ItemQuality"					"component"
+		"ItemAliases"					"broadsword"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"30"
+			}
+		}
+	}
+	//=================================================================================================================
 	// Orb of Passage
 	//=================================================================================================================
 	"item_orb_of_passage"
@@ -21,7 +142,7 @@
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-
+	
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -33,283 +154,17 @@
 			}
 		}
 	}
-
-	//=================================================================================================================
-	// Teleport Scroll
-	//=================================================================================================================
-	"item_teleport"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_tpscroll"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NOASSIST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BUILDING"
-		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
-		"Model"							"models/props_gameplay/tpscroll01.vmdl"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"0"
-		"AbilityCooldown"				"10.0"
-		"AbilitySharedCooldown"			"teleport"
-		"AbilityChannelTime"			"3.0"
-		"AbilityCastPoint"				"0.0"
-		
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"10"
-		"ItemCost"						"100"
-		"ItemShopTags"					"consumable;tutorial"
-		"ItemQuality"					"consumable"
-		"ItemAliases"					"tp;town portal scroll"
-		"ItemStackable"					"1"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemPermanent"					"0"
-		"ItemInitialCharges"			"1"
-		"SideShop"						"1"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"minimun_distance"		"70"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"maximum_distance"		"575"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"vision_radius"			"200"
-			}
-		}
-	}	
-
-	//=================================================================================================================
-	// Arboreal Refreshment
-	//=================================================================================================================
-	"item_arboreal_refreshment"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_tango"
-		"AbilityTextureName"			"item_tango"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"Model"							"models/props_gameplay/tango.vmdl"
-		"Effect"						"particles/generic_gameplay/dropped_tango.vpcf"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"165"
-		"AbilityCastPoint"				"0.0"
-		
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"125"
-		"ItemShopTags"					"consumable"
-		"ItemQuality"					"consumable"
-		"ItemAliases"					"tango"
-		"ItemStackable"					"1"
-		"ItemPermanent"					"0"
-		"ItemInitialCharges"			"3"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"total_heal"			"150"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"total_heal_ward_tooltip"			"230"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cast_range_ward"			"450"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"buff_duration"			"10.0"
-			}
-		}
-	}
-
-	//=================================================================================================================
-	// Broadsword tier1
-	//=================================================================================================================
-	"item_broadsword_tier_one"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_broadsword"
-		"AbilityTextureName"			"item_broadsword"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"100"
-		"ItemShopTags"					"damage"
-		"ItemQuality"					"component"
-		"ItemAliases"					"broadsword"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"15"
-			}
-		}
-	}
-
-	//=================================================================================================================
-	// Broadsword tier2
-	//=================================================================================================================
-	"item_broadsword_tier_two"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_broadsword"
-		"AbilityTextureName"			"item_broadsword"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"100"
-		"ItemShopTags"					"damage"
-		"ItemQuality"					"component"
-		"ItemAliases"					"broadsword"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"30"
-			}
-		}
-	}
-
-	//=================================================================================================================
-	// Broadsword tier3
-	//=================================================================================================================
-	"item_broadsword_tier_three"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_broadsword"
-		"AbilityTextureName"			"item_broadsword"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"100"
-		"ItemShopTags"					"damage"
-		"ItemQuality"					"component"
-		"ItemAliases"					"broadsword"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"45"
-			}
-		}
-	}
-
-	//=================================================================================================================
-	// Broadsword (epic)
-	//=================================================================================================================
-	"item_broadsword_epic"
-	{
-		"BaseClass"						"item_lua"
-		"ScriptFile"					"lua_items/item_broadsword_epic.lua"
-		"AbilityTextureName"			"item_broadsword"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"100"
-		"ItemShopTags"					"damage"
-		"ItemQuality"					"epic"
-		"ItemAliases"					"broadsword"
-		"SideShop"						"1"
-
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"100"
-			}
-		}
-	}
-
-	//=================================================================================================================
-	// Saprophytic Blade
-	//=================================================================================================================
-	"item_saprophytic_blade"
-	{
-		"BaseClass"						"item_lua"
-		"ScriptFile"					"lua_items/item_saprophytic_blade.lua"
-		"AbilityTextureName"			"item_demon_edge"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"100"
-		"ItemShopTags"					"damage"
-		"ItemQuality"					"epic"
-		"ItemAliases"					"blade"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"100"
-			}
-		}
-	}
-
 	//=================================================================================================================
 	// Ritual Dirk
 	//=================================================================================================================
 	"item_ritual_dirk"
 	{
+		"ID"							"2002"		
 		"BaseClass"						"item_lua"
 		"ScriptFile"					"lua_items/item_ritual_dirk.lua"
 		"AbilityTextureName"			"item_diffusal_blade"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
+	
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"100"
@@ -319,7 +174,7 @@
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-
+	
 		"AbilitySpecial"
 		{
 			"01"
@@ -329,7 +184,36 @@
 			}
 		}
 	}	
-
+	//=================================================================================================================
+	// Saprophytic Blade
+	//=================================================================================================================
+	"item_saprophytic_blade"
+	{
+		"ID"							"2003"		
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/item_saprophytic_blade.lua"
+		"AbilityTextureName"			"item_demon_edge"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"100"
+		"ItemShopTags"					"damage"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"blade"
+		"ItemPurchasable"				"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"100"
+			}
+		}
+	}
 	//=================================================================================================================
 	// Staff of the Ruminant
 	//=================================================================================================================
@@ -337,21 +221,22 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2001"
 		"BaseClass"						"item_sheepstick"
 		"AbilityTextureName"			"item_sheepstick"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-
+	
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"800"
 		"AbilityCastPoint"				"0.0"
-
+	
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"15.0"
-
+	
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"100"
@@ -399,4 +284,751 @@
 			}
 		}
 	}	
+	"item_tome_of_agility"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2053"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_tome_of_agility"
+		
+		"Model"							"models/props_debris/merchant_debris_book001.vmdl"
+		"Effect"						"particles/econ/courier/courier_trail_international_2013/courier_international_2013.vpcf"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		//"ItemCost"						"0"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemKillable"					"1"
+		"ItemPurchasable"				"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"SideShop"						"0"
+		"SecretShop" "1"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"bonus_stat"	"1"
+			}
+		}
+		
+		"ItemCastOnPickup"				"1"
+		"OnSpellStart"
+		{
+			"SpendCharge" 
+			{}
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/items/tomes.lua"
+				"Function"				"AgilityTomeUsed"
+				"bonus_stat"	"%bonus_stat"
+			}
+			"FireSound"
+			{
+				"EffectName"			"DOTA_Item.HotD.Activate"
+				"Target"				"CASTER"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/units/heroes/hero_dragon_knight/dragon_knight_transform_green.vpcf"
+				"EffectAttachType" 	"follow_origin"
+			}	
+			"AttachEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/sweep_generic/sweep_1.vpcf"
+				"EffectAttachType" 	"follow_overhead"
+			}
+		}
+	
+		"Modifiers"
+		{
+			"tome_modifier"
+			{
+				"Passive"	"1"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"items.lua"
+						"Function"		"CastOnPickup"
+					}
+				}
+			}
+	
+			"tome_agility_modifier"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT"
+				"IsBuff"		"1"
+				"TextureName"	"item_tome_of_agility"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"1"
+				}
+			}
+		}
+	}
+	"item_tome_of_agility_three"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2058"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_tome_of_agility"
+		
+		"Model"							"models/props_debris/merchant_debris_book001.vmdl"
+		"Effect"						"particles/econ/courier/courier_trail_international_2013/courier_international_2013.vpcf"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		//"ItemCost"						"0"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemKillable"					"1"
+		"ItemPurchasable"				"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"SideShop"						"0"
+		"SecretShop" "1"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"bonus_stat"	"3"
+			}
+		}
+		
+		"ItemCastOnPickup"				"1"
+		"OnSpellStart"
+		{
+			"SpendCharge" 
+			{}
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/items/tomes.lua"
+				"Function"				"AgilityTomeUsed"
+				"bonus_stat"	"%bonus_stat"
+			}
+			"FireSound"
+			{
+				"EffectName"			"DOTA_Item.HotD.Activate"
+				"Target"				"CASTER"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/units/heroes/hero_dragon_knight/dragon_knight_transform_green.vpcf"
+				"EffectAttachType" 	"follow_origin"
+			}	
+			"AttachEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/sweep_generic/sweep_1.vpcf"
+				"EffectAttachType" 	"follow_overhead"
+			}
+		}
+	
+		"Modifiers"
+		{
+			"tome_modifier"
+			{
+				"Passive"	"1"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"items.lua"
+						"Function"		"CastOnPickup"
+					}
+				}
+			}
+	
+			"tome_agility_modifier"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT"
+				"IsBuff"		"1"
+				"TextureName"	"item_tome_of_agility"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"1"
+				}
+			}
+		}
+	}
+	"item_tome_of_agility_two"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2055"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_tome_of_agility"
+		
+		"Model"							"models/props_debris/merchant_debris_book001.vmdl"
+		"Effect"						"particles/econ/courier/courier_trail_international_2013/courier_international_2013.vpcf"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		//"ItemCost"						"0"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemKillable"					"1"
+		"ItemPurchasable"				"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"SideShop"						"0"
+		"SecretShop" "1"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"bonus_stat"	"2"
+			}
+		}
+		
+		"ItemCastOnPickup"				"1"
+		"OnSpellStart"
+		{
+			"SpendCharge" 
+			{}
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/items/tomes.lua"
+				"Function"				"AgilityTomeUsed"
+				"bonus_stat"	"%bonus_stat"
+			}
+			"FireSound"
+			{
+				"EffectName"			"DOTA_Item.HotD.Activate"
+				"Target"				"CASTER"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/units/heroes/hero_dragon_knight/dragon_knight_transform_green.vpcf"
+				"EffectAttachType" 	"follow_origin"
+			}	
+			"AttachEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/sweep_generic/sweep_1.vpcf"
+				"EffectAttachType" 	"follow_overhead"
+			}
+		}
+	
+		"Modifiers"
+		{
+			"tome_modifier"
+			{
+				"Passive"	"1"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"items.lua"
+						"Function"		"CastOnPickup"
+					}
+				}
+			}
+	
+			"tome_agility_modifier"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT"
+				"IsBuff"		"1"
+				"TextureName"	"item_tome_of_agility"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"1"
+				}
+			}
+		}
+	}
+	"item_tome_of_intellect"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2054"	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_tome_of_intellect"
+		
+		"Model"							"models/props_debris/merchant_debris_book001.vmdl"
+		"Effect"						"particles/econ/courier/courier_roshan_frost/courier_roshan_frost_ambient.vpcf"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		//"ItemCost"						"0"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemKillable"					"1"
+		"ItemPurchasable"				"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"SideShop"						"0"
+		"SecretShop" "1"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"bonus_stat"	"1"
+			}
+		}
+		
+		"ItemCastOnPickup"				"1"
+		"OnSpellStart"
+		{
+			"SpendCharge" 
+			{}
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/items/tomes.lua"
+				"Function"				"IntellectTomeUsed"
+				"bonus_stat"	"%bonus_stat"
+			}
+			"FireSound"
+			{
+				"EffectName"			"DOTA_Item.HotD.Activate"
+				"Target"				"CASTER"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/items2_fx/shivas_guard_impact.vpcf"
+				"EffectAttachType" 	"follow_overhead"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/units/heroes/hero_dragon_knight/dragon_knight_transform_blue.vpcf"
+				"EffectAttachType" 	"follow_origin"
+			}
+		}
+		"Modifiers"
+			{
+			"tome_intelect_modifier"
+				{
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT"
+				"IsBuff"	"1"
+				"TextureName"	"item_tome_of_intellect"
+				"Properties"
+					{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"1"
+					}
+				}
+			}
+	}
+	"item_tome_of_intellect_three"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2060"	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_tome_of_intellect"
+		
+		"Model"							"models/props_debris/merchant_debris_book001.vmdl"
+		"Effect"						"particles/econ/courier/courier_roshan_frost/courier_roshan_frost_ambient.vpcf"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		//"ItemCost"						"0"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemKillable"					"1"
+		"ItemPurchasable"				"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"SideShop"						"0"
+		"SecretShop" "1"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"bonus_stat"	"3"
+			}
+		}
+		
+		"ItemCastOnPickup"				"1"
+		"OnSpellStart"
+		{
+			"SpendCharge" 
+			{}
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/items/tomes.lua"
+				"Function"				"IntellectTomeUsed"
+				"bonus_stat"	"%bonus_stat"
+			}
+			"FireSound"
+			{
+				"EffectName"			"DOTA_Item.HotD.Activate"
+				"Target"				"CASTER"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/items2_fx/shivas_guard_impact.vpcf"
+				"EffectAttachType" 	"follow_overhead"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/units/heroes/hero_dragon_knight/dragon_knight_transform_blue.vpcf"
+				"EffectAttachType" 	"follow_origin"
+			}
+		}
+		"Modifiers"
+			{
+			"tome_intelect_modifier"
+				{
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT"
+				"IsBuff"	"1"
+				"TextureName"	"item_tome_of_intellect"
+				"Properties"
+					{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"1"
+					}
+				}
+			}
+	}
+	"item_tome_of_intellect_two"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2057"	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_tome_of_intellect"
+		
+		"Model"							"models/props_debris/merchant_debris_book001.vmdl"
+		"Effect"						"particles/econ/courier/courier_roshan_frost/courier_roshan_frost_ambient.vpcf"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		//"ItemCost"						"0"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemKillable"					"1"
+		"ItemPurchasable"				"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"SideShop"						"0"
+		"SecretShop" "1"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"bonus_stat"	"2"
+			}
+		}
+		
+		"ItemCastOnPickup"				"1"
+		"OnSpellStart"
+		{
+			"SpendCharge" 
+			{}
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/items/tomes.lua"
+				"Function"				"IntellectTomeUsed"
+				"bonus_stat"	"%bonus_stat"
+			}
+			"FireSound"
+			{
+				"EffectName"			"DOTA_Item.HotD.Activate"
+				"Target"				"CASTER"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/items2_fx/shivas_guard_impact.vpcf"
+				"EffectAttachType" 	"follow_overhead"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/units/heroes/hero_dragon_knight/dragon_knight_transform_blue.vpcf"
+				"EffectAttachType" 	"follow_origin"
+			}
+		}
+		"Modifiers"
+			{
+			"tome_intelect_modifier"
+				{
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT"
+				"IsBuff"	"1"
+				"TextureName"	"item_tome_of_intellect"
+				"Properties"
+					{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"1"
+					}
+				}
+			}
+	}
+	"item_tome_of_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2052"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_tome_of_strength"
+		
+		"Model"							"models/props_debris/merchant_debris_book001.vmdl"
+		"Effect"						"particles/econ/courier/courier_greevil_orange/courier_greevil_orange_ambient_3.vpcf"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		//"ItemCost"						"0"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemKillable"					"1"
+		"ItemPurchasable"				"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"SideShop"						"0"
+		"SecretShop" "1"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"bonus_stat"	"1"
+			}
+		}
+		
+		"ItemCastOnPickup"				"1"
+		"OnSpellStart"
+		{
+			"SpendCharge" 
+			{}
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/items/tomes.lua"
+				"Function"				"StrengthTomeUsed"
+				"bonus_stat"	"%bonus_stat"
+			}
+			"FireSound"
+			{
+				"EffectName"			"DOTA_Item.HotD.Activate"
+				"Target"				"CASTER"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/sweep_generic/sweep_2.vpcf"
+				"EffectAttachType" 	"follow_origin"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/units/heroes/hero_dragon_knight/dragon_knight_transform_red.vpcf"
+				"EffectAttachType" 	"follow_origin"
+			}			
+		}
+	
+		"Modifiers"
+			{
+			"tome_strenght_modifier"
+				{
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT"
+				"IsBuff"	"1"
+				"TextureName"	"item_tome_of_strength"
+				"Properties"
+					{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"1"
+					}
+				}
+			}
+	}
+	"item_tome_of_strength_three"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2059"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_tome_of_strength"
+		
+		"Model"							"models/props_debris/merchant_debris_book001.vmdl"
+		"Effect"						"particles/econ/courier/courier_greevil_orange/courier_greevil_orange_ambient_3.vpcf"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		//"ItemCost"						"0"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemKillable"					"1"
+		"ItemPurchasable"				"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"SideShop"						"0"
+		"SecretShop" "1"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"bonus_stat"	"3"
+			}
+		}
+		
+		"ItemCastOnPickup"				"1"
+		"OnSpellStart"
+		{
+			"SpendCharge" 
+			{}
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/items/tomes.lua"
+				"Function"				"StrengthTomeUsed"
+				"bonus_stat"	"%bonus_stat"
+			}
+			"FireSound"
+			{
+				"EffectName"			"DOTA_Item.HotD.Activate"
+				"Target"				"CASTER"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/sweep_generic/sweep_2.vpcf"
+				"EffectAttachType" 	"follow_origin"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/units/heroes/hero_dragon_knight/dragon_knight_transform_red.vpcf"
+				"EffectAttachType" 	"follow_origin"
+			}			
+		}
+	
+		"Modifiers"
+			{
+			"tome_strenght_modifier"
+				{
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT"
+				"IsBuff"	"1"
+				"TextureName"	"item_tome_of_strength"
+				"Properties"
+					{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"1"
+					}
+				}
+			}
+	}
+	"item_tome_of_strength_two"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2056"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_tome_of_strength"
+		
+		"Model"							"models/props_debris/merchant_debris_book001.vmdl"
+		"Effect"						"particles/econ/courier/courier_greevil_orange/courier_greevil_orange_ambient_3.vpcf"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		//"ItemCost"						"0"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemKillable"					"1"
+		"ItemPurchasable"				"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"SideShop"						"0"
+		"SecretShop" "1"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"bonus_stat"	"2"
+			}
+		}
+		
+		"ItemCastOnPickup"				"1"
+		"OnSpellStart"
+		{
+			"SpendCharge" 
+			{}
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/items/tomes.lua"
+				"Function"				"StrengthTomeUsed"
+				"bonus_stat"	"%bonus_stat"
+			}
+			"FireSound"
+			{
+				"EffectName"			"DOTA_Item.HotD.Activate"
+				"Target"				"CASTER"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/sweep_generic/sweep_2.vpcf"
+				"EffectAttachType" 	"follow_origin"
+			}
+			"FireEffect"
+			{
+				"Target" "CASTER"
+				"EffectName"		"particles/units/heroes/hero_dragon_knight/dragon_knight_transform_red.vpcf"
+				"EffectAttachType" 	"follow_origin"
+			}			
+		}
+	
+		"Modifiers"
+			{
+			"tome_strenght_modifier"
+				{
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT"
+				"IsBuff"	"1"
+				"TextureName"	"item_tome_of_strength"
+				"Properties"
+					{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"1"
+					}
+				}
+			}
+	}
 }

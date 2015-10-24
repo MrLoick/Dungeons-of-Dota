@@ -1,0 +1,143 @@
+//=================================================================================================================
+    // Tusk Walrus Kick
+    //=================================================================================================================
+    "tusk_walrus_kick_dd"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_ALL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "MaxLevel"                      "6"
+        "AbilityTextureName"            "tusk_walrus_kick"
+
+        // Precache
+        //-------------------------------------------------------------------------------------------------------------
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts"
+        }
+        
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "128"
+        "AbilityCastPoint"              "0"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_5"
+        "AnimationPlaybackRate"         "0.1"
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "12.0 10.0 8.0 6.0 5.0 3.0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "75 85 90 95 100 105"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crit_multiplier"           "0.0"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "air_time"                  "1.0"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "push_length"               "900"
+            }           
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "move_slow"                 "40"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "slow_duration"             "4"
+            }           
+            "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "damage"                    "60 85 110 135 160 200"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "FireSound"
+            {
+                "EffectName"    "Hero_Tusk.WalrusKick.Target"
+                "Target"        "CASTER"
+            }
+            
+            "RunScript"
+            {
+                "ScriptFile"    "heroes/hero_tusk/kick.lua"
+                "Function"      "Kick"
+            }
+
+            "ActOnTargets"
+            {
+                "Target"
+                {
+                    "Center" "TARGET"
+                }
+
+                "Action"
+                {
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_kick_datadriven"
+                        "Target"        "TARGET"
+                        "Duration"      "%slow_duration"
+                    }
+                }
+            }
+
+            "ActOnTargets"
+            {
+                "Target"
+                {
+                    "Center" "TARGET"
+                    "Flags"  "DOTA_UNIT_TARGET_FLAG_DEAD"
+                }
+
+                "Action"
+                {
+                    "ApplyMotionController"
+                    {
+                        "Target"        "TARGET"
+                        "ScriptFile"    "heroes/hero_tusk/kick.lua"
+                        "HorizontalControlFunction" "KickHorizontal"
+                        "VerticalControlFunction"   "KickVertical"         
+                    }
+                }
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"    "heroes/hero_tusk/kick.lua"
+                "Function"      "KickDamage"
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_kick_datadriven"
+            {
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"   "-%move_slow"
+                }
+            }
+        }
+    }

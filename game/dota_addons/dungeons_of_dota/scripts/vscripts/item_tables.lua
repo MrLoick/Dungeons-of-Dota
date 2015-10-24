@@ -5,15 +5,15 @@
 --------------------------------------------------------------------------------
 
 local tTIER_01_ITEMS_ALL = {
-	"item_broadsword_tier_one", "item_flask", "item_enchanted_mango", "item_ring_of_protection", "item_mithril_hammer", "item_helm_of_iron_will"
+	"item_broadsword_tier_one", "item_flask", "item_enchanted_mango", "item_ring_of_protection", "item_mithril_hammer", "item_tome_of_strength", "item_tome_of_intellect", "item_tome_of_agility"
 }
 
 local tTIER_02_ITEMS_ALL = {
-	"item_flask", "item_helm_of_iron_will", "item_broadsword_tier_two", "item_saprophytic_blade", "item_ritual_dirk", "item_boots", "item_chainmail", "item_mithril_hammer", "item_claymore", "item_ring_of_basilius"
+	"item_flask", "item_helm_of_iron_will", "item_broadsword_tier_two", "item_saprophytic_blade", "item_ritual_dirk", "item_boots", "item_chainmail", "item_mithril_hammer", "item_claymore", "item_ring_of_basilius", "item_tome_of_strength_two", "item_tome_of_intellect_two", "item_tome_of_agility_two"
 }
 
 local tTIER_03_ITEMS_ALL = {
-	"item_phase_boots", "item_broadsword_tier_three", "item_platemail", "item_saprophytic_blade", "item_ritual_dirk", "item_helm_of_iron_will", "item_claymore", "item_helm_of_iron_will", "item_ring_of_basilius"
+	"item_phase_boots", "item_broadsword_tier_three", "item_platemail", "item_saprophytic_blade", "item_ritual_dirk", "item_helm_of_iron_will", "item_claymore", "item_helm_of_iron_will", "item_ring_of_basilius", "item_tome_of_strength_three", "item_tome_of_intellect_three", "item_tome_of_agility_three"
 }
 
 local tTIER_04_ITEMS_ALL = {

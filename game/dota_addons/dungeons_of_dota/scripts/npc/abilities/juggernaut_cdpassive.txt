@@ -1,0 +1,45 @@
+"juggernaut_cdpassive_dd"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"blood_seeker_thirst"
+	"MaxLevel"						"6"
+			
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{		
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"cleave_mana_cost_adjust"			"-10 -15 -20 -25"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"cleave_cooldown_adjust"		"25 30 35 40 45 50"
+		}
+		"03"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"dash_mana_cost_adjust"			"-10 -15 -20 -25"
+		}
+	}
+
+    "Modifiers"
+    {
+        "modifier_juggernaut_cdpassive_datadriven"
+        {
+            "Passive"               "1"
+            "IsPurgable"            "0"
+            "IsHidden"              "1"
+                
+            "Properties"
+            {
+                "MODIFIER_PROPERTY_COOLDOWN_REDUCTION_CONSTANT"     "%cleave_cooldown_adjust"
+            }
+        }
+    }
+}

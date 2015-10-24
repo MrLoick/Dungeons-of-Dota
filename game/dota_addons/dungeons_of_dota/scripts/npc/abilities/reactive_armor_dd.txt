@@ -1,0 +1,77 @@
+//=================================================================================================================
+    // Tusk Reactive Armor
+    //=================================================================================================================
+    "reactive_armor_dd"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"             "ability_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"    "lich_ice_armor"
+        "MaxLevel"              "6"
+        
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "bonus_armor"                       "1"
+            }
+            "02"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "bonus_hp_regen"                    "2"
+            }
+            "03"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "stack_limit"                       "5 9 12 16 19 24"
+            }
+            "04"
+            {
+                "var_type"                          "FIELD_FLOAT"
+                "stack_duration"                    "16.0 16.0 16.0 16.0 16.0 16.0"
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_adrenaline_datadriven"
+            {
+                "Passive"   "1"
+                "IsHidden"  "1"
+
+                "OnAttacked"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"    "scripts/vscripts/heroes/hero_tusk/adrenaline.lua"
+                        "Function"      "Adrenaline"
+                    }
+                }
+            }
+
+            "modifier_adrenaline_buff_stack_datadriven"
+            {
+                "Duration"  "%stack_duration"
+                "IsBuff"    "1"
+            }
+
+            "modifier_adrenaline_buff_datadriven"
+            {
+                "IsHidden"      "1"
+                "Duration"      "%stack_duration"
+
+                "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"       "%bonus_armor"
+                    "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"       "%bonus_hp_regen"
+                }
+            }
+        }
+    }

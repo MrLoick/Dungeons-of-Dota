@@ -1,0 +1,92 @@
+//==============================================================================================================
+    // CM Frost Nova
+    //==============================================================================================================
+    "cm_frost_nova_dd"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+        "AbilityTextureName"            "crystal_maiden_crystal_nova"
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "6"
+
+        // Stats        
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "14 12 10 8 6 4"
+        "AbilityManaCost"               "100"
+        "AbilityCastPoint"              "0.0"
+
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "blast_final_radius"            "725 775 825 875 925 1000"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "blast_speed_per_second"        "350"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "blast_damage"                  "80 95 110 135 160 200"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "blast_movement_speed_debuff"   "-40"
+            }
+            "05"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "blast_debuff_duration"         "4"
+            }
+            "06"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "blast_vision_radius"           "800"
+            }
+            "07"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "blast_vision_duration"         "2"
+            }
+        }
+        
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"                    "heroes/hero_crystal_maiden/cm_frost_nova.lua"
+                "Function"                      "frost_nova_on_spell_start"
+                "BlastSpeedPerSecond"           "%blast_speed_per_second"
+                "BlastVisionRadius"             "%blast_vision_radius"
+                "BlastVisionDuration"           "%blast_vision_duration"
+            }
+        }
+        
+        "Modifiers"
+        {
+            "modifier_item_shivas_guard_datadriven_blast_debuff"
+            {
+                "Duration"          "%blast_debuff_duration"
+                "Passive"           "0"
+                "IsHidden"          "0"
+                "IsBuff"            "0"
+                "IsDebuff"          "1"
+                "IsPurgable"        "1"
+                
+                "StatusEffectName"     "particles/status_fx/status_effect_frost.vpcf"
+                "StatusEffectPriority" "10"
+                
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"      "%blast_movement_speed_debuff"
+                }
+            }
+        }
+    }

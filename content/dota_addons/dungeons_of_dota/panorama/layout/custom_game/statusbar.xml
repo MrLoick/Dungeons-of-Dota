@@ -1,0 +1,30 @@
+<root>  
+       
+	<styles>        
+		<include src="file://{resources}/styles/custom_game/statusbar.css" />
+		<include src="file://{resources}/styles/dotastyles.css" />
+		
+	</styles>      
+	         
+	<scripts> 
+		<include src="file://{resources}/scripts/custom_game/statusbar.js" />
+	</scripts>       
+	    
+	<Panel class="rootPanel" hittest="false">
+		<Panel id="TargetPanel" hittest="false">
+			<Panel id="TargetHealthBar" hittest="false">
+				<Label id="TargetHealthBarText" text="0/0" hittest="false"/>
+				<Panel id="THBCContainer">
+					<Panel id="TargetHealthBarColor" src="" hittest="false" />
+				</Panel>
+			</Panel>
+			<Panel id="TargetManaBar" hittest="false">
+				<Label id="TargetManaBarText" text="0/0" hittest="false"/>
+				<Panel id="TMBCContainer">
+					<Panel id="TargetManaBarColor" src="" hittest="false" />
+				</Panel>
+			</Panel>
+		</Panel>	
+	</Panel>
+	
+</root>

@@ -1,0 +1,137 @@
+//=================================================================================================================
+    // Tusk Walrus Punch
+    //=================================================================================================================
+    "tusk_walrus_punch_dd"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_ALL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "MaxLevel"                      "6"
+        "AbilityTextureName"            "tusk_walrus_punch"
+
+        // Precache
+        //-------------------------------------------------------------------------------------------------------------
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts"
+        }
+        
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "128"
+        "AbilityCastPoint"              "0.1 0.1 0.1 0.1 0.1 0.1"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "6.0 5.0 4.0 3.0 2.0 1.0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "15 25 35 45 50 55"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                    "var_type"                  "FIELD_INTEGER"
+                    "crit_multiplier"           "350 375 400 425 450 500"
+                }
+                "02"
+                {
+                    "var_type"                  "FIELD_FLOAT"
+                    "air_time"                  "1.0 1.0 1.0 1.0 1.0 1.0"
+                }
+                "03"
+                {
+                    "var_type"                  "FIELD_FLOAT"
+                    "slow_duration"             "2.0 3.0 4.0 5.0 6.0 7.0"
+                }
+                "04"
+                {
+                    "var_type"                  "FIELD_INTEGER"
+                    "move_slow"                 "40"
+                }
+                "05"
+                {
+                    "var_type"                  "FIELD_INTEGER"
+                    "push_length"               "1000"
+                }
+            }
+
+        "OnSpellStart"
+        {
+            "FireSound"
+            {
+                "EffectName"    "Hero_Tusk.WalrusPunch.Target"
+                "Target"        "CASTER"
+            }
+            
+            "RunScript"
+            {
+                "ScriptFile"    "heroes/hero_tusk/punch.lua"
+                "Function"      "Punch"
+            }
+
+            "ActOnTargets"
+            {
+                "Target"
+                {
+                    "Center" "TARGET"
+                }
+
+                "Action"
+                {
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_punch_datadriven"
+                        "Target"        "TARGET"
+                        "Duration"      "%slow_duration"
+                    }
+                }
+            }
+
+            "ActOnTargets"
+            {
+                "Target"
+                {
+                    "Center" "TARGET"
+                    "Flags" "DOTA_UNIT_TARGET_FLAG_DEAD"
+                }
+
+                "Action"
+                {
+                    "ApplyMotionController"
+                    {
+                        "Target"        "TARGET"
+                        "ScriptFile"    "heroes/hero_tusk/punch.lua"
+                        "VerticalControlFunction"   "PunchVertical"         
+                    }
+                }
+            }
+            
+            "RunScript"
+            {
+                "ScriptFile"    "heroes/hero_tusk/punch.lua"
+                "Function"      "PunchDamage"
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_punch_datadriven"
+            {
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"   "-%move_slow"
+                }
+            }
+        }
+    }

@@ -1,0 +1,38 @@
+<root>  
+       
+	<styles>        
+		<include src="file://{resources}/styles/custom_game/expbar.css" />
+		<include src="file://{resources}/styles/dotastyles.css" />
+		
+	</styles>      
+	         
+	<scripts> 
+		<include src="file://{resources}/scripts/custom_game/expbar.js" />
+	</scripts>       
+	    
+	<Panel class="rootPanel" hittest="false">
+		<Panel id="InfoPanel" hittest="false">
+			<Panel id="TargetInfo" hittest="false">
+				<Label id="TargetInfoText" text="Hero Info" hittest="false"/>
+			</Panel>
+			<Panel id="TargetArmor" hittest="false">
+				<Label id="TargetArmorText" text="0" hittest="false"/>
+			</Panel>
+			<Panel id="TargetDamage" hittest="false">
+				<Label id="TargetDamageText" text="0" hittest="false"/>
+			</Panel>
+		</Panel>
+		<Panel id="TargetPanel" hittest="false">
+			<Panel id="TargetLvl" hittest="false">
+				<Label id="TargetLvlText" text="0" hittest="false"/>
+			</Panel>
+			<Panel id="TargetExpBar" hittest="false">
+				<Label id="TargetExpBarText" text="0/0" hittest="false"/>
+				<Panel id="TEBCContainer">
+					<Panel id="TargetExpBarColor" src="" hittest="false" />
+				</Panel>
+			</Panel>
+		</Panel>	
+	</Panel>
+	
+</root>

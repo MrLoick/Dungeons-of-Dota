@@ -15,7 +15,7 @@ _G.nROAMER_MAX_DIST_FROM_SPAWN = 256
 _G.nCAMPER_MAX_DIST_FROM_SPAWN = 256
 _G.nPATROLLER_MAX_DIST_FROM_SPAWN = 128
 _G.nBOSS_MAX_DIST_FROM_SPAWN = 0
-_G.nCREATURE_RESPAWN_TIME = 600
+_G.nCREATURE_RESPAWN_TIME = 1200
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Dungeons of Dota class
@@ -29,6 +29,9 @@ end
 -- Required .lua files, which just exist to help organize functions contained in our addon.  Make sure to call these beneath the mode's class creation.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 require( "utility_functions" ) -- require utility_functions first since some of the other required files may use its functions
+require( "popups" )
+require( "libraries/timers" )
+require( "libraries/projectiles" )
 require( "events" )
 require( "rpg_example_spawning" )
 require( "worlditem_spawning" )
@@ -45,6 +48,15 @@ function Precache( context )
 	PrecacheResource( "particle", "particles/hw_fx/hw_rosh_fireball_fire_launch.vpcf", context )
 	PrecacheResource( "particle", "particles/econ/generic/generic_aoe_shockwave_1/generic_aoe_shockwave_1.vpcf", context)
 	PrecacheResource( "particle", "particles/units/heroes/hero_leshrac/leshrac_split_earth.vpcf", context)
+	PrecacheResource( "particle", "particles/units/heroes/hero_dragon_knight/dragon_knight_transform_blue.vpcf", context)
+	PrecacheResource( "particle", "particles/units/heroes/hero_dragon_knight/dragon_knight_transform_green.vpcf", context)
+	PrecacheResource( "particle", "particles/units/heroes/hero_dragon_knight/dragon_knight_transform_red.vpcf", context)
+	PrecacheResource( "particle", "particles/sweep_generic/sweep_2.vpcf", context)
+	PrecacheResource( "particle", "particles/sweep_generic/sweep_1.vpcf", context)
+	PrecacheResource( "particle", "particles/econ/courier/courier_greevil_red/courier_greevil_red_ambient_3.vpcf", context)
+	PrecacheResource( "particle", "particles/econ/courier/courier_trail_international_2013/courier_international_2013.vpcf", context)
+	PrecacheResource( "particle", "particles/econ/courier/courier_greevil_orange/courier_greevil_orange_ambient_3.vpcf", context)
+	PrecacheResource( "particle", "particles/econ/courier/courier_roshan_frost/courier_roshan_frost_ambient.vpcf", context)
 
 	PrecacheResource( "soundfile", "soundevents/game_sounds_main.vsndevts", context )
 	PrecacheResource( "soundfile", "soundevents/game_sounds_triggers.vsndevts", context )

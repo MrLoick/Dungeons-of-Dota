@@ -109,7 +109,7 @@ function CDod:Think_InitializePlayerHero( hPlayerHero )
 		hPlayerHero:UpgradeAbility( hPlayerHero:GetAbilityByIndex( 1 ) )
 		hPlayerHero:SetIdleAcquire( false )
 
-		if GetMapName() == "ruinous_dungeon" or "misty_heights" or "fiery_depths" then
+		if GetMapName() == "ruinous_dungeon" or "misty_heights" or "fiery_depths" or "dead_ends" or "icy_demise" then
 			local nLightParticleID = ParticleManager:CreateParticle( "particles/addons_gameplay/player_deferred_light.vpcf", PATTACH_ABSORIGIN, hPlayerHero )
 			ParticleManager:SetParticleControlEnt( nLightParticleID, PATTACH_ABSORIGIN, hPlayerHero, PATTACH_ABSORIGIN, "attach_origin", hPlayerHero:GetAbsOrigin(), true )
 		end

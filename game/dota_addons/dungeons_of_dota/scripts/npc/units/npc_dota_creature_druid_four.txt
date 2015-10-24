@@ -1,0 +1,93 @@
+//=================================================================
+// Creature: Druid 4
+//=================================================================
+"npc_dota_creature_druid_four"
+{
+	// Script
+	"vscripts"					"rpg_creature.lua"
+
+	// General
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/items/lone_druid/true_form/wizened_bear/wizened_bear.vmdl"	// Model.
+	"SoundSet"					"Hero_Lone_Druid"					// Name of sound set.
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_lone_druid.vsndevts"
+	"ModelScale"				"0.85"								
+	"Level"						"1"
+	//"ConsideredHero"			"0"
+
+	"precache"
+	{
+		"particle_folder"	"particles/units/heroes/hero_lone_druid"
+	}
+
+	// Abilities
+	//----------------------------------------------------------------
+	"Ability1"					""
+	"Ability2"					""
+	"Ability3"					""
+	"Ability4"					""
+	"Ability5"					""
+	"Ability6"					""
+	"Ability7"					""
+	"Ability8"					""
+
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"6"		// Physical protection.
+	"MagicalResistance"			"10"		// Magical protection.
+
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackDamageMin"			"40"		// Damage range min.
+	"AttackDamageMax"			"50"		// Damage range max.
+	"AttackRate"				"1.25"		// Speed of attack.
+	"AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
+	"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+	"AttackRange"				"128"		// Range within a target can be attacked.
+	"ProjectileModel"			""			// Particle system model for projectile.
+	"ProjectileSpeed"			""			// Speed of projectile.
+
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyXP"					"45"		// Experience earn.
+	"BountyGoldMin"				"30"		// Gold earned min.
+	"BountyGoldMax"				"40"		// Gold earned max.
+
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
+	"HealthBarOffset"			"140"
+
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+	"MovementSpeed"				"320"		// Speed
+	"MovementTurnRate"			"0.75"		// Turning rate.
+
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"340"		// Base health.
+	"StatusHealthRegen"			"2.0"		// Health regeneration rate.
+	"StatusMana"				"0"			// Base mana.
+	"StatusManaRegen"			"0"			// Mana regeneration rate.
+
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_BADGUYS"			// Team name.
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_LIGHT"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+	"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1400"		// Range of vision during day light.
+	"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+	//Precache
+	//------------------------------------------------------------------
+//		"VoiceFile"				"soundevents/voscripts/game_sounds_vo_broodmother.vsndevts"
+//		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_broodmother.vsndevts"
+
+	"ShouldDoFlyHeightVisual" "0"
+}

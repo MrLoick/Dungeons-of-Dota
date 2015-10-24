@@ -1,0 +1,171 @@
+//==============================================================================================================
+    // CM Congealment
+    //==============================================================================================================
+    "cm_congealment_dd"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "BaseClass"                     "ability_datadriven"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_BOTH"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "FightRecapLevel"               "1"
+        "AbilityTextureName"            "crystal_maiden_frostbite"
+        "MaxLevel"                      "6"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "500"
+        "AbilityCastPoint"              "0.3 0.3 0.3 0.3 0.3 0.3"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "9.0 8.0 7.0 6.0 5.0 3.5"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "60 70 75 80 85 90"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityModifierSupportValue"   "0.5"   // Applies multiple modifiers
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "damage_per_second_tooltip"         "50"
+            }
+            "02"
+            {
+                "var_type"                        "FIELD_INTEGER"
+                "heal_per_second_tooltip"         "50"
+            }
+            "03"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "duration"          "1.5 2.0 2.5 3.0 4.0 5.0"
+            }
+            "04"
+            {
+                "var_type"                       "FIELD_INTEGER"
+                "enemy_damage_tooltip"           "150 200 250 300 400 500"
+            }
+           "05"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "ally_heal_tooltip"             "150 200 250 300 400 500"
+            }
+            "06"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "interval"          "0.5"
+            }
+        }
+        
+        // Data driven
+        //-------------------------------------------------------------------------------------------------------------
+        "precache"
+        {
+            "soundfile"             "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts"
+            "particle"              "particles/units/heroes/hero_crystalmaiden/maiden_frostbite_buff.vpcf"
+            "particle"              "particles/units/heroes/hero_crystalmaiden/maiden_frostbite.vpcf"
+        }
+        
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "heroes/hero_crystal_maiden/cm_congealment.lua"
+                "Function"      "Congealment"
+                "Target"        "TARGET"
+            }
+
+            "TrackingProjectile"
+            {
+                "Target"            "TARGET"
+                "EffectName"        "particles/units/heroes/hero_crystalmaiden/maiden_frostbite.vpcf"
+                "MoveSpeed"         "2000"
+            }
+        
+            "FireSound"
+            {
+                "Target"            "TARGET"
+                "EffectName"        "hero_Crystal.frostbite"
+            }
+        }
+        
+        "Modifiers"
+        {
+            "modifier_frost_bite_root_datadriven"
+            {
+                "IsPurgable"        "1"
+            
+                "EffectName"        "particles/units/heroes/hero_crystalmaiden/maiden_frostbite_buff.vpcf"
+            
+                "States"
+                {
+                    "MODIFIER_STATE_ROOTED"     "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_INVISIBLE"  "MODIFIER_STATE_VALUE_DISABLED"
+                }
+            }
+            
+            "modifier_frost_bite_heal_datadriven"
+            {
+                "IsPurgable"        "1"
+                "IsHidden"          "1"
+                
+                "OnCreated"
+                {
+                    "Heal"
+                    {
+                        "HealAmount"    "%heal_per_second_tooltip / 2"
+                        "Target"        "TARGET"
+                    }
+                }
+                
+                "ThinkInterval"     "%interval"
+                "OnIntervalThink"
+                {
+                    "Heal"
+                    {
+                        "HealAmount"    "%heal_per_second_tooltip / 2"
+                        "Target"        "TARGET"
+                    }
+                }
+            }
+
+            "modifier_frost_bite_damage_datadriven"
+            {
+                "IsPurgable"        "1"
+                "IsHidden"          "1"
+                
+                "OnCreated"
+                {
+                    "Damage"
+                    {
+                        "Target"    "TARGET"
+                        "Damage"    "%damage_per_second_tooltip / 2"
+                        "Type"      "DAMAGE_TYPE_MAGICAL"
+                    }
+                }
+                
+                "ThinkInterval"     "%interval"
+                "OnIntervalThink"
+                {
+                    "Damage"
+                    {
+                        "Target"    "TARGET"
+                        "Damage"    "%damage_per_second_tooltip / 2"
+                        "Type"      "DAMAGE_TYPE_MAGICAL"
+                    }
+                }
+            }
+        }
+    }

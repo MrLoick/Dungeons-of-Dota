@@ -1,0 +1,143 @@
+//=================================================================================
+// Creature: Mini Roshan
+//=================================================================================
+"npc_dota_creature_warlock"
+{
+	// Script
+	"vscripts"					"rpg_creature_boss.lua"
+
+	// General
+	"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+	"Model"						"models/heroes/warlock/warlock.vmdl"	// Model.
+	"SoundSet"					"hero_Warlock"					// Name of sound set.
+	"ModelScale"				"1.3"
+	"Level"						"1"
+	"ConsideredHero"			"1"
+
+	// Abilities
+	//----------------------------------------------------------------
+	"Ability1"					"creature_demon_summon"	// Ability 1.
+	"Ability2"					"creature_debuff_boss"			// Ability 2.
+	"Ability3"					""			// Ability 3.
+	"Ability4"					""			// Ability 4.
+	"Ability5"					""			// Ability 5.
+	"Ability6"					""			// Ability 6 - Extra.
+	"Ability7"					""			// Ability 7 - Extra.
+	"Ability8"					""			// Ability 8 - Extra.
+
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"2"			// Physical protection.
+	"MagicalResistance"			"25"		// Magical protection (percentage).
+
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageMin"			"40"		// Damage range min.
+	"AttackDamageMax"			"60"		// Damage range max.
+	"AttackRate"				"1"			// Speed of attack.
+	"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+	"AttackAcquisitionRange"	"1000"		// Range within a target can be acquired.
+	"AttackRange"				"525"		// Range within a target can be attacked.
+	"ProjectileModel"			"particles/units/heroes/hero_warlock/warlock_base_attack.vpcf" // Particle system model for projectile.
+	"ProjectileSpeed"			"1000"		// Speed of projectile.
+
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyXP"					"500"		// Experience earn.
+	"BountyGoldMin"				"300"		// Gold earned min.
+	"BountyGoldMax"				"400"		// Gold earned max.
+
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"			// Hull type used for navigation/locomotion.
+	"RingRadius"				"60"
+	"HealthBarOffset"			"200"
+
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+	"MovementSpeed"				"270"		// Speed
+	"MovementTurnRate"			"1.0"		// Turning rate.
+
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"1400"		// Base health.
+	"StatusHealthRegen"			"1"		// Health regeneration rate.
+	"StatusMana"				"500"		// Base mana.
+	"StatusManaRegen"			"5"			// Mana regeneration rate.
+
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"			// Team name.
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_LIGHT"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+	"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1400"		// Range of vision during day light.
+	"VisionNighttimeRange"		"1400"		// Range of vision at night time.
+
+	// Creature Data
+	//----------------------------------------------------------------------------------------------------------------------
+	"Creature"
+	{
+		"CanRespawn"				"0"
+		"States"
+		{
+			"Invade"
+			{
+				"Name"				"Invade"
+				"Aggression"		"100.0"
+				"Avoidance"			"50.0"
+				"Support"			"85.0"
+			}
+		}
+
+		"DefaultState"				"Invade"
+
+		"OffensiveAbilities"
+		{
+			"Ability1"				
+			{
+				"Name"				"creature_demon_summon"
+				"AOE"				"1"
+				"Radius"			"650"
+				"MinimumTargets"	"1"
+			}
+		}
+
+		"AttachWearables"
+		{
+			"Wearable1"
+			{
+				"ItemDef"			"239"		
+			}
+			"Wearable2"
+			{
+				"ItemDef"			"240"		
+			}
+			"Wearable3"
+			{
+				"ItemDef"			"241"		
+			}
+			"Wearable4"
+			{
+				"ItemDef"			"242"		
+			}
+			"Wearable5"
+			{
+				"ItemDef"			"243"		
+			}
+			"Wearable6"
+			{
+				"ItemDef"			"244"		
+			}
+			"Wearable7"
+			{
+				"ItemDef"			"245"		
+			}
+		}
+	}
+}	
